@@ -1,6 +1,13 @@
 fn main() {
-    let name: &str = "Supriyo";
-    let greeting: String = String::from("Hello World!");
+    let mut greeting = String::from("Hello World!");
+    greeting.push_str(" Supriyo");
 
     println!("{}", greeting);
+    let n = 4;
+
+    if let Some(c) = greeting.chars().nth(n) {
+        println!("{}", c);
+    } else {
+        println!("No character at position {}", n);
+    }
 }
